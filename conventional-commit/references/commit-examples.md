@@ -632,3 +632,58 @@ Closes #123
 Fixes #456
 Related to #789
 ```
+
+## Provider-aware ticket references
+
+Keep the header code-focused and put provider references after the body.
+
+### Neutral reference
+
+```text
+refactor(auth): extract session validation
+
+Refs: #123
+```
+
+### GitHub or compatible auto-close
+
+```text
+fix(auth): prevent duplicate callback processing
+
+Closes #123
+```
+
+### Azure Repos work item
+
+```text
+fix(auth): prevent duplicate callback processing
+
+Fixes #123
+```
+
+### GitHub connected to Azure Boards
+
+```text
+fix(auth): prevent duplicate callback processing
+
+Refs: AB#12345
+```
+
+### Jira-linked repository
+
+```text
+fix(search): escape reserved query characters
+
+Refs: JRA-123
+```
+
+### Gerrit review
+
+```text
+fix(index): reduce false positives in query expansion
+
+Bug: Issue 24891
+Change-Id: I0123456789abcdef0123456789abcdef01234567
+```
+
+Consult the matching provider file before using a state-changing keyword.
