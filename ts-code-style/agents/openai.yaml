@@ -1,0 +1,3 @@
+interface:
+  display_name: "TypeScript Code Style"
+  short_description: "Write concise, native-first TypeScript."
