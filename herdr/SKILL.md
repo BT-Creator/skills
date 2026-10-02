@@ -12,6 +12,8 @@ If you are an agent reading this, please read the refence for the role that you'
 - [Coordinator](references/roles/coordinator.md)
 - [Implementor](references/roles/implementor.md)
 
+If no explicit role has been mentioned, assume that you have been assigned the role of [Intake](references/roles/intake.md) 
+
 ## Controls
 
 The original Herdr skill is available under [Controls](references/controls.md). This includes the commands that are available to you, and how to use them. It is recommended to read this before using Herdr, as it will help you understand how to use the different commands and how to use them in the different roles.
@@ -28,6 +30,7 @@ Within the workflow, there are 3 roles:
 ## Example Flow
 
 A full example workflow looks like this:
+
 **Start Intake boundary**
 1. Take in the original user request
 2. Check if there is a workspace for the current project. If there isn't any, rename the current workspace to the project name.
@@ -35,6 +38,7 @@ A full example workflow looks like this:
 4. Start the same harness as the user is currently using
 5. Forward the request of the user towards the root plane of the newly created workspace
 **End Intake boundary**
+
 **Start Coordinator boundary**
 6. Research, create the needed specs / plans and review this with the user
 7. Assess which repos will need to be changed for the implementation.
@@ -42,20 +46,24 @@ A full example workflow looks like this:
 9. For each worktree created, create a new Herdr plane, using the repo path as worktree. If possible, keep the current plane (Where you are running) as the largest plane, as it is the plane that will take incomming requests
 10. Forward the work that needs to be done in each plane based on the repo
 **End coordinator boundary**
+
 **Start Implementor Boundary**
 11. Implement the work you've been assigned to by the coordinator according to the user coding preferences in regards to commit, reviewing, etc...
 12. Perform a review round for the work
 13. Resolve any bugs of issues discovered
 14. Report back the work you've performed to the coordinator
 **End implementor boundary**
+
 **Start coordinator boundary**
 15. Verify if the work perform in each repo is compatible with eachother and will not cause any issues
 16. If any imcompatibilies arise, send instructions back to the appropriate implementor to resolve this
 **End coordinator boundary**
+
 **Start implementor boundary**
 17. Resolve imcompatibilities and implement feedback from coordinator
 18. Report back to coordinator
 **End implementor coordinator**
+
 **Start coordinator boundary**
 19. Report back to the user and let the user review the code & the functionality
 **End coordinator boundary**
