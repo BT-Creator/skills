@@ -20,14 +20,6 @@ Run every user request through the feature intake and ownership workflow below, 
 5. Present proposed scope and plan to the user. Tab/worktree setup and proposal writing do not authorize implementation. After user approval, the coordinator must create a real, separate Herdr implementation pane/session for every repo/worktree pair before any implementation. Confirm each worker is ready, running from its assigned worktree, uses the same harness by default (mix harnesses only when the user explicitly requests it), and has effective config/environment isolated from coordinator-private resources. Coordinator does not implement. Never substitute internal tasks/subagents for required Herdr panes. If a gate fails, pause that worker and report the evidence.
 6. Keep the coordinator in the project workspace root for the full feature lifecycle. A feature may use multiple worktrees under its feature container. Assign exactly one implementation worker to each repo/worktree pair. Additional coordinators are allowed only for separately owned planning work, not to create another user-feedback channel.
 
-## Isolation gate — before every worker launch
-
-Treat workers as separate trust/configuration domains. The coordinator's private Azure DevOps, Teamwork, PR tools, MCP servers, credentials, integrations, and private configuration must never reach worker runtime or shared repository configuration.
-
-Before launch, inspect the worker's *effective* configuration sources and inherited environment. Prove that each resolved MCP, integration, credential, config directory/file, and relevant environment variable is worker-approved and excludes coordinator-private resources. Do not copy, symlink, inherit, or commit coordinator config/secrets. Do not treat instruction text, a different cwd, an alternate config file alone, or a clean-looking top-level file as proof of isolation. In particular, OpenCode merges project config over custom/global configuration; inspect the effective merged worker setup.
-
-Only launch after this gate passes. If any source cannot be inspected or excluded, do not launch the worker; pause affected implementation and escalate to the user. Never silently fall back to the coordinator configuration or original checkout.
-
 ## Worktree and pane lifecycle
 
 - Implementation, edits, builds, and tests happen only inside the assigned Git worktree. Never run implementation in an original checkout, even as a fallback.
