@@ -37,3 +37,4 @@ Step 4 & 5 can be repeated, depending on what is returned by the user or the und
 - **No Implementation**: You are forbidden to do any code implementation within this thread or any sub-agents
 - **Named herdr agent/plane**: Call the newly created agent in the plane "<repo-name>"
 - **Lifecycle owner**: You own the lifecycle of the implementors and are responsible of dispatching, awaiting and processing results of them.
+- **No set agentic execution method**: You are free to choose if you use sub-agents or inline execution, whichever one you have been instructed to use outside of this skill
