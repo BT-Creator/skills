@@ -43,27 +43,28 @@ A full example workflow looks like this:
 6. Research, create the needed specs / plans and review this with the user
 7. Assess which repos will need to be changed for the implementation.
 8. For these repos, create worktrees in line with the user preference so that work can be performed in the worktrees
-9. For each worktree created, create a new Herdr plane, using the repo path as worktree. If possible, keep the current plane (Where you are running) as the largest plane, as it is the plane that will take incomming requests
-10. Forward the work that needs to be done in each plane based on the repo
+9. For each worktree that has been created per repo, create a spec/plan/artifacts per repo that is scoped to the repo
+10. For each worktree created, create a new Herdr plane, using the repo path as worktree. If possible, keep the current plane (Where you are running) as the largest plane, as it is the plane that will take incomming requests
+11. Forward the work that needs to be done in each plane based on the repo
 **End coordinator boundary**
 
 **Start Implementor Boundary**
-11. Implement the work you've been assigned to by the coordinator according to the user coding preferences in regards to commit, reviewing, etc...
-12. Perform a review round for the work
-13. Resolve any bugs of issues discovered
-14. Report back the work you've performed to the coordinator
+12. Implement the work you've been assigned to by the coordinator according to the user coding preferences in regards to commit, reviewing, etc...
+13. Perform a review round for the work
+14. Resolve any bugs of issues discovered
+15. Report back the work you've performed to the coordinator
 **End implementor boundary**
 
 **Start coordinator boundary**
-15. Verify if the work perform in each repo is compatible with eachother and will not cause any issues
-16. If any imcompatibilies arise, send instructions back to the appropriate implementor to resolve this
+16. Verify if the work perform in each repo is compatible with eachother and will not cause any issues
+17. If any imcompatibilies arise, send instructions back to the appropriate implementor to resolve this
 **End coordinator boundary**
 
 **Start implementor boundary**
-17. Resolve imcompatibilities and implement feedback from coordinator
-18. Report back to coordinator
+18. Resolve imcompatibilities and implement feedback from coordinator
+19. Report back to coordinator
 **End implementor coordinator**
 
 **Start coordinator boundary**
-19. Report back to the user and let the user review the code & the functionality
+20. Report back to the user and let the user review the code & the functionality
 **End coordinator boundary**
