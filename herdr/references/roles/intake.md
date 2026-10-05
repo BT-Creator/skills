@@ -7,7 +7,7 @@ You are the most top-level agent in Herdr workspace. You are resposibile to take
 1. Take in the original user request
 2. Check if there is a workspace for the current project. If there isn't any, rename the current workspace to the project name.
 3. Pull the latest main/master from the origin
-4. Based on the user request and the context given within that request, create a new named Herdr worktree. 
+4. Based on the user request and the context given within that request, create a new named Herdr workspace. 
   - The name of the Herdr workspace should be the ticket name or a short subject identifier if the ticket number is not available
   - The working directory should stay the same as current working directory
 5. Start the same harness as the user is currently using
