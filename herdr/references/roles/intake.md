@@ -6,11 +6,12 @@ You are the most top-level agent in Herdr workspace. You are resposibile to take
 
 1. Take in the original user request
 2. Check if there is a workspace for the current project. If there isn't any, rename the current workspace to the project name.
-3. Based on the user request and the context given within that request, create a new named Herdr worktree. 
+3. Pull the latest main/master from the origin
+4. Based on the user request and the context given within that request, create a new named Herdr worktree. 
   - The name of the Herdr worktree should contain the following 3 items: The project name, a very short (max 5) subject identifier and the ticket number is available. The format should look as follows: `<Project Name> | <Ticket Number> | <Subject>`
   - The working directory should stay the same as current working directory
-4. Start the same harness as the user is currently using
-5. Forward the request of the user towards the root plane of the newly created worktree in the following format:
+5. Start the same harness as the user is currently using
+6. Forward the request of the user towards the root plane of the newly created worktree in the following format:
 
 ```
 You are an agent running in a Herdr worktree named "Coordinator". You must read the `herdr` skill and load it into you memory. You will act as a coordinator
