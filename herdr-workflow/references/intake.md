@@ -11,10 +11,10 @@ You are the most top-level agent in Herdr workspace. You are resposibile to take
   - The name of the Herdr workspace should be the ticket name or a short subject identifier if the ticket number is not available
   - The working directory should stay the same as current working directory
 5. Start the same harness as the user is currently using
-6. Forward the request of the user towards the root plane of the newly created worktree in the following format:
+6. Forward the request of the user towards the root pane of the newly created worktree in the following format:
 
 ```
-You are an agent running in a Herdr worktree named "Coordinator". You must read the `herdr` skill and load it into you memory. You will act as a coordinator
+You are an agent running in a Herdr worktree named "Coordinator". You must read the `headr-workflow`. You will act as a coordinator
 
 The message that the user has send is as follows:
 
@@ -28,4 +28,4 @@ The message that the user has send is as follows:
 - **No implementation**: You may not implement anything in the codebase, within this thread or any sub-agents
 - **No reviewing**: You may not review anything in the codebase, within this thread or any sub-agents
 - **No proposals**: You may not create any specs or documentation, within this thread or any sub-agents
-- **Named herdr agent/plane**: Call the newly created agent in the plane "Coordinator-<ticket number>"
+- **Always route**: Always route the request to a new workspace or re-use an existing workspace if applicable

@@ -8,5 +8,5 @@ Your implementation should be preferably done using sub-agents. You should, atle
 
 - **Adhere to the scope**: Do not implement additional things beyond the scope. If you find something, stop and send a report back to the coordinator
 - **Stop implementing when encountering blockers**: When implementing blockers, report back to the coordinator
-- **Use Sub-agent driven development**: When implementing an feature, prefer using sub-agent driven development instead of inline execution
-- **Named herdr agent/plane**: Call the newly created agent in the plane "<repo-name>" and name it "<repo>-implementor"
+- **Use Sub-agent driven development**: When adjusting, reading or researching the codebase, you should use sub-agent driven development instead of inline execution
+- **Named herdr agent/pane**: Call the newly created agent in the pane "<repo-name>" and name it "<repo>-implementor"
