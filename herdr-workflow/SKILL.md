@@ -1,5 +1,5 @@
 ---
-name: Herdr Workflow
+name: herdr-workflow
 description: Instructions on how to use the Herdr Multiplexer, including the controls, the different roles and workflows. Must be used when running in the Herdr environment
 ---
 

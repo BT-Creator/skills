@@ -1,5 +1,5 @@
 ---
-name: Escalation Stage
+name: escalation-stage
 description: An E2E agentic stage, to be added after the user's workflow, focused on solving functionality with the cheaper module and escalating the models when the current setup is unable to correctly solve or implement the assignment
 ---
 
