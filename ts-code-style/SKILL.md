@@ -1,6 +1,6 @@
 ---
 name: typescript-code-style
-description: Apply a concise, native-first TypeScript coding style when generating new TypeScript or refactoring existing TypeScript source code. Prefer suitable existing project functionality, JavaScript and TypeScript language features, direct collection operations, derived and precise types, type aliases, modern supported syntax, minimal abstractions, and clear named asynchronous flows. Preserve runtime behavior, type safety, inference, narrowing, mutation, ordering, errors, module semantics, and public contracts while reducing unnecessary lines, state, branches, wrappers, helpers, assertions, annotations, and concepts. Use only for language-level TypeScript in .ts, .mts, and .cts files; do not treat it as a standalone code-review, React, JSX/TSX, framework, package, architecture, or tooling best-practices skill.
+description: Use when writing or refactoring TypeScript code for browser or Node.js runtimes
 ---
 
 # TypeScript Code Style

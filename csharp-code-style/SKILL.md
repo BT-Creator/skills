@@ -1,6 +1,6 @@
 ---
 name: csharp-code-style
-description: Apply a concise, native-first C# coding style when generating new C# or refactoring existing C# source code. Prefer suitable existing project functionality, Base Class Library APIs, direct LINQ or collection operations, modern supported C# syntax, minimal abstractions, expression-bodied members, and clear named asynchronous flows. Preserve behavior, readability, nullability, equality, mutation, disposal, and async semantics while reducing unnecessary lines, state, branches, wrappers, helpers, and concepts. Use only for language-level C# style; do not treat it as a standalone code-review, ASP.NET Core, Entity Framework, testing-framework, architecture, or package-specific best-practices skill.
+description: Use when editing C# code or refactoring C# code
 ---
 
 # C# Code Style

@@ -1,6 +1,6 @@
 ---
 name: conventional-commits
-description: Create or review Git commit messages that follow Conventional Commits 1.0.0, including provider-aware issue, ticket, work-item, review, and workflow references. Use when committing code, proposing a commit message, reviewing commit history, or adding host-specific references for GitHub, GitLab, Azure DevOps, Gerrit, Bitbucket, Gitea, Forgejo/Codeberg, or Phabricator.
+description: Use when writing or reviewing commit messages in a repo that uses conventional commits
 ---
 
 # Conventional Commits

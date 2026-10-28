@@ -1,6 +1,6 @@
 ---
 name: js-code-style
-description: Apply a concise, native-first JavaScript coding style when generating new JavaScript or refactoring existing JavaScript in .js, .mjs, or .cjs files for browsers or Node.js. Prefer existing project functionality, built-in JavaScript APIs, direct expressions, modern supported syntax, minimal abstractions, shorthand, and named asynchronous flows. Preserve behavior and readability while reducing unnecessary lines, state, branches, helpers, and concepts. Do not use for React, JSX, TypeScript, standalone code reviews, framework-specific conventions, or package-specific best practices.
+description: Use when writing or refactoring JavaScript code for browser or Node.js runtimes
 ---
 
 # JavaScript Code Style

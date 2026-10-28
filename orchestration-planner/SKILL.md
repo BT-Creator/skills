@@ -1,6 +1,6 @@
 ---
 name: orchestration-planning
-Description: Design an execution topology for the orchestrating agent. Determine coherent workstreams, ownership boundaries, dependencies, safe parallelism, appropriate agents/skills/tools, validation oracles, and review requirements. Optimize for minimum coordination overhead and maximum useful concurrency.
+Description: Use when planning an execution topology for a set of requested outcomes, in order to maximize parallelism, minimize coordination, and avoid write conflicts.
 ---
 
 # Orchestration Planning

@@ -1,6 +1,6 @@
 ---
 name: opencode-codemode
-description: Use during agentic coding when coordinating multiple exposed tools with OpenCode Code Mode, or when the user asks for it. Guides discovery and safe orchestration; use repo tools for local edits and tests.
+description: Use when orchestrating code generation, refactoring, or analysis across multiple tools and repositories within Opencode
 ---
 
 # OpenCode Code Mode
