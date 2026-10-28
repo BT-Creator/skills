@@ -1,69 +1,36 @@
 ---
 name: herdr-workflow
-description: Instructions on how to use the Herdr Multiplexer, including the controls, the different roles and workflows. Must be used when running in the Herdr environment
+description: Use when user is working with the herdr multiplexer and sending teh first message.
 ---
 
-# Herdr
+# Herdr Workflow
 
-This details how to use Herdr, an agentic Multiplexer and which different roles there are in Herdr. This includes the different commands, roles and how the workflow looks like.
+Use this skill for Herdr controls, role assignment, and the workspace lifecycle. Read the assigned role profile; read loop references when coordinating that phase.
 
-If you are an agent reading this, please read the refence for the role that you've been assigned:
-- [Intake](references/roles/intake.md)
-- [Coordinator](references/roles/coordinator.md)
-- [Implementor](references/roles/implementor.md)
-
-If no explicit role has been mentioned, assume that you have been assigned the role of [Intake](references/roles/intake.md) 
+If no role is assigned, use [Intake](references/roles/intake.md).
 
 ## Controls
 
-The original Herdr skill is available under the `herdr` skill or by using the `herdr --skill` command
+The original Herdr skill is available as the `herdr` skill or through `herdr --skill`.
 
-## Workflow
+## Roles
 
-### Roles
+| Role | Profile | Responsibility |
+| --- | --- | --- |
+| Intake | [intake.md](references/roles/intake.md) | Routes the original request into a Herdr workspace. |
+| Coordinator | [coordinator.md](references/roles/coordinator.md) | Owns the workspace lifecycle, handoffs, panes, and user approvals. |
+| Researcher | [researcher.md](references/roles/researcher.md) | Identifies affected repositories, impact, risks, and solution options. |
+| Speccer | [speccer.md](references/roles/speccer.md) | Produces requested specifications, plans, and execution breakdowns. |
+| Scafolder | [scafolder.md](references/roles/scafolder.md) | Prepares the workspace and assigned worktrees. |
+| Implementor | [implementor.md](references/roles/implementor.md) | Implements assigned changes in a repository worktree. |
+| Reviewer | [reviewer.md](references/roles/reviewer.md) | Reviews assigned artifacts or code and reports findings. |
 
-Within the workflow, there are 3 roles:
-- [Intake](references/roles/intake.md): The intake is the top-level agent that takes in the request of the user and creates a new Herdr worktree for it. The intake is responsible for routing.
-- [Coordinator](references/roles/coordinator.md): The coordinator is the top-level agent of a Herdr workspace. The coordinator is responsible for processing the request of the user by researching it, planning and creating spec. It is also responsible for creating the required git worktrees and panes for the implementors and managing the lifecycle.
-- [Implementor](references/roles/implementor.md): The implementor is the agent that is responsible for implementing the feature in the codebase in a git worktree. The implementor is created by the coordinator and is responsible for implementing the feature in the workspace that is assigned to it.
+## Workflow overview
 
-## Example Flow
+1. Intake routes the request to a Coordinator in a new or applicable workspace.
+2. Coordinator and Researcher complete the [research approval loop](references/loops/research-approval.md).
+3. After approval, Speccer creates the requested artifacts; Coordinator runs the [spec self-review loop](references/loops/spec-self-review.md) and [spec user-approval loop](references/loops/spec-user-approval.md).
+4. After spec approval, Scafolder prepares the workspace. Implementors work in assigned repo worktrees, with Reviewers scoped to each worktree and the full workspace. Coordinator runs the [implementation self-review loop](references/loops/implementation-self-review.md) and [implementation user-approval loop](references/loops/implementation-user-approval.md).
+5. Coordinator reports the approved result and remaining risks.
 
-A full example workflow looks like this:
-
-**Start Intake boundary**
-1. Take in the original user request
-2. Check if there is a workspace for the current project. If there isn't any, rename the current workspace to the project name.
-3. Based on the user request and the context given within that request, create a new named Herdr workspace. 
-4. Start the same harness as the user is currently using
-5. Forward the request of the user towards the root pane of the newly created workspace
-**End Intake boundary**
-
-**Start Coordinator boundary**
-6. Research, create the needed specs / plans and review this with the user
-7. Assess which repos will need to be changed for the implementation.
-8. For these repos, create git worktrees in line with the user preference so that work can be performed in the git worktrees
-9. For each git worktree created, create a new Herdr pane, using the repo path as working directory. If possible, keep the current pane (Where you are running) as the largest pane, as it is the pane should be remain focused
-10. Forward the work that needs to be done in each pane based on the repo
-**End coordinator boundary**
-
-**Start Implementor Boundary**
-12. Implement the work you've been assigned to by the coordinator according to the user coding preferences in regards to commit, reviewing, etc...
-13. Perform a review round for the work using sub-agents
-14. Resolve any bugs of issues discovered
-15. Report back the work you've performed to the coordinator
-**End implementor boundary**
-
-**Start coordinator boundary**
-16. Verify if the work perform in each repo is compatible with eachother and will not cause any issues
-17. If any imcompatibilies arise, send instructions back to the appropriate implementor to resolve this
-**End coordinator boundary**
-
-**Start implementor boundary**
-18. Resolve imcompatibilities and implement feedback from coordinator
-19. Report back to coordinator
-**End implementor coordinator**
-
-**Start coordinator boundary**
-20. Report back to the user and let the user review the code & the functionality
-**End coordinator boundary**
+The role profiles define responsibilities and handoffs. Each loop reference defines its participants, steps, return path, and completion condition.
