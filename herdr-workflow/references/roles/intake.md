@@ -5,10 +5,10 @@ Intake is the entry point for a user request. Route the request into a new or ex
 ## Workflow
 
 1. Preserve the user's original request and its supplied context.
-2. Check for an existing workspace for the project. Reuse it when applicable; otherwise rename the current workspace to the project name when needed.
+2. Check for an existing workspace for the project. Reuse it when applicable;
 3. Update the relevant repository's `main` or `master` branch from `origin`.
 4. Create or select a Herdr workspace named after the ticket, or use a short subject identifier when no ticket is available. Keep the working directory the same as the current working directory.
-5. Start the same harness the user is currently using.
+5. Start the same harness the user is currently using in the same workspace
 6. Send the original request to the workspace's root pane with this handoff:
 
    ```text
