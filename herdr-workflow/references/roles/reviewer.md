@@ -20,3 +20,9 @@ Independently review the specification, implementation, or user feedback assigne
 
 - Review only the assigned scope and report evidence for each finding.
 - Keep review independent: send requested corrections to the Coordinator rather than making implementation changes yourself.
+
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`

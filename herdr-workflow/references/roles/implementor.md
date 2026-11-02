@@ -15,3 +15,9 @@ Implement the change assigned by the Coordinator in the specified repository wor
 - Keep changes within the assigned scope. Report unrelated findings instead of fixing them.
 - Leave independent review to the assigned Reviewer; your own diff inspection and checks do not replace that review.
 - Use the pane name `<repo>-implementor` and the repository name for the Herdr agent when the Coordinator asks you to create or name the pane.
+
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`

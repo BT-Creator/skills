@@ -22,6 +22,12 @@ Use this role for a request assigned to a Herdr workspace that requires coordina
 - Use a new pane's first message to identify the `herdr-workflow` skill, the assigned role, and the Coordinator's task. Later messages can use the conversation's established context.
 - Own the lifecycle: dispatch, await, route findings to the responsible role, and repeat the relevant loop until its completion condition passes.
 
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`
+
 ## Guardrails
 
 - Delegate all code changes to Implementors; keep Coordinator focused on coordination and user decisions.

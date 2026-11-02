@@ -15,3 +15,9 @@ Prepare the workspace and assigned repository worktrees so Implementors can begi
 - Prepare only the assigned repositories and worktrees; leave feature implementation to Implementors.
 - Use existing dependencies and tooling. Do not add packages or dependencies as part of setup.
 - Preserve existing user changes and report setup conflicts before taking destructive action.
+
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`

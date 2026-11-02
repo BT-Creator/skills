@@ -14,3 +14,9 @@ Create the requested specification, plan, or other planning artifact from the us
 
 - Preserve the user's requirements and approved research; flag conflicts instead of silently deciding them.
 - Create planning artifacts only. Leave repository setup to the Scafolder and code changes to Implementors.
+
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`

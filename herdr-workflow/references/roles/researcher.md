@@ -17,3 +17,9 @@ Include affected repositories, likely change areas, risks or dependencies, and r
 
 - Research only the assigned request; leave specifications and code changes to the Speccer and Implementor.
 - Keep findings grounded in available evidence and distinguish facts from assumptions.
+
+## Suggested Skills
+
+Use the following skills if they are available:
+- `writing-for-agents`
+- `handover`
